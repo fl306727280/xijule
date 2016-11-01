@@ -209,14 +209,31 @@
     <div class="bgwhite pd_tp_bt">
         <div class="jlmain">
             <h2 class="textC fontsize35 mrbt40">相关视频</h2>
+
+            <content action="lists" catid="50" order="listorder asc" num="7">
+
             <div class="xjvideo">
-                <ul>
-                    <li><span><a href="#"><img src="/statics/xijule/images/video.gif" /></a></span><h2 class="textC"><a href="#">视频相关介绍</a></h2></li>
-                    <li><span><a href="#"><img src="/statics/xijule/images/video.gif" /></a></span><h2 class="textC"><a href="#">视频相关介绍</a></h2></li>
-                    <li><span><a href="#"><img src="/statics/xijule/images/video.gif" /></a></span><h2 class="textC"><a href="#">视频相关介绍</a></h2></li>
+                <ul >
+                    <volist name="data" id="vo" key="k">
+
+
+                        <li class="voide" >
+                        <span>
+                            <a url="{$vo[video_url]}" href="javascript:;">
+                                <img onerror="this.src='/statics/xijule/images/video.gif'" src="{$vo['thumb']}" width="386" height="218" alt="{$vo['title']}" />
+                            </a>
+                        </span>
+                            <h2 class="textC"><a href="javascript:;">{$vo['title']}</a></h2>
+                        </li>
+                    </volist>
+
                 </ul>
                 <div class="clear"></div>
             </div>
+
+            </content>
+
+
         </div>
     </div>
 </section>
@@ -326,12 +343,33 @@
 
 
 
-
-
-
 <template file="Content/footer.php"/>
 
 
 </body>
+<script type="text/javascript">
+
+    $(function () {
+        $(".voide").click(function () {
+            var url = $(this).find('a').eq(0).attr('url');
+            //iframe层-多媒体
+            layer.open({
+                type: 2,
+                title: false,
+                area: ['700px', '500px'],
+                shade: 0.8,
+                closeBtn: 0,
+                shadeClose: true,
+                content: url
+            });
+
+        });
+
+
+
+
+    })
+
+</script>
 
 </html>
