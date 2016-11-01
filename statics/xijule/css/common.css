@@ -116,6 +116,9 @@ input { border: none; margin: 0; padding: 0; }
 .xj-bt-icon1{ height: 52px;  background:#fff url(../images/cticon4.gif) no-repeat center top;}
 .xjvideo ul li{ float: left; width: 386px;margin-right: 10px;}
 .xjvideo ul li.mg0{ margin-right: 0;}
+.xjvideo ul li span{ display: block; height: 218px; overflow: hidden; position: relative;}
+.xjvideo ul li span a i{ display: none; z-index: 999; width: 45px; height: 45px; background: url(../images/video-btn.png) no-repeat; position: absolute; left: 50%; top: 50%; margin-left:-22px; margin-top: -22px;}
+.xjvideo ul li span a:hover i{ display: block;}
 .xjvideo ul li h2{ padding: 10px 0;}
 .xjvideo{ padding-bottom: 50px;}
 
@@ -131,7 +134,7 @@ input { border: none; margin: 0; padding: 0; }
 .huoban{ height: 395px; background:url(../images/linkbg.jpg) no-repeat center top; padding-top: 68px;}
 .titlebg1{ width: 297px; height: 42px; background: url(../images/titlebg1.png) no-repeat; }
 .huoban ul{ padding-top: 20px; overflow: hidden;}
-.huoban ul li{ width: 118px; height: 118px; margin: 0 22px 20px 10px; float: left;}
+.huoban ul li{ width: 118px; height: 118px; margin: 0 22px 20px 10px; float: left; border-radius: 50%; overflow: hidden;}
 .huoban ul li img{ width: 118px; height: 118px;}
 
 .footer{ background-color: #353535;}

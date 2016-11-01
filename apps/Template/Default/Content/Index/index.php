@@ -221,6 +221,7 @@
                         <span>
                             <a url="{$vo[video_url]}" href="javascript:;">
                                 <img onerror="this.src='/statics/xijule/images/video.gif'" src="{$vo['thumb']}" width="386" height="218" alt="{$vo['title']}" />
+                                <i></i>
                             </a>
                         </span>
                             <h2 class="textC"><a href="javascript:;">{$vo['title']}</a></h2>
