@@ -26,23 +26,9 @@
 
     <link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
 
-    <link href="{$config_siteurl}statics/yzjc/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="{$config_siteurl}statics/xijule/css/common.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=B3f7707c25da5b29a6ff69618788a296"></script>
-
-    <script type="text/javascript">
-
-        //全局变量
-
-        var GV = {
-
-            DIMAUB: "{$config_siteurl}",
-
-            JS_ROOT: "statics/js/"
-
-        };
-
-    </script>
 
     <script src="{$config_siteurl}statics/js/jquery.js" type="text/javascript"></script>
 
@@ -51,108 +37,41 @@
     <script type="text/javascript" src="{$config_siteurl}statics/js/ajaxForm.js"></script>
 
 
-
 </head>
 
-<body>
+<body class="bgwhite">
 
 
 
 <template file="Content/header.php"/>
 
-<div class="main">
-
-    <div class="content">
+<section>
+    <div class="jlmain pd_tp_bt">
 
         <template file="Content/Show/menu.php"/>
 
-
-
-        <div class="nr_right">
-
-            <div class="current-wz mrbt15">
-                <ul>
-                    <volist name="lists" id="v" >
-                        <li <?php if($_GET['catid']==$v['catid']):?> class="selected" <?php endif;?>><a {$v['catid']} href="{$v.url}" class="">{$v.title}</a></li>
-                    </volist>
-                </ul>
+        <div class="nr-rg-wd fr">
+            <div class="rgcut">
+                <span class="sptitle fontsize20 fl">{:get_firstmenu_title($catid)}</span>
+                <span class="sp-pos fontsize12 textR fr">
+                     <img src="/statics/xijule/images/posicon.gif" />当前位置：
+                     <a href="{$config_siteurl}">首页</a> &gt; <navigate catid="$catid" space=" &gt; " />
+                </span>
             </div>
-
-            <div class="contenttitle">{$title}</div>
-
-            <div class="newsinfo"><!--更新时间：{:date('Y-m-d H:i:s',$updatetime)}-->　<!--来源：{$copyfrom?$copyfrom:"本站原创"}　作者：{$username}　阅读：<span id="hits">0</span>--></div>
-
-            <div class="rgcontent fontsize14">
-
-                {$content}
-
+            <div class="news-ny-content pd_tp_bt">
+                <h1 class="textC fontsize26 h1title">{$title}</h1>
+                <div class="news-detail fontsize16">
+                    {$content}
+                </div>
             </div>
-
         </div>
-
         <div class="clear"></div>
-
-
-
-
-
     </div>
-
-
-
-</div>
-
+</section>
 
 
 <template file="Content/footer.php"/>
 
-<script type="text/javascript">
-
-    $(function (){
-
-        $(window).toTop({showHeight : 100});
-
-        //点击
-
-        $.get("{$config_siteurl}api.php?m=Hits&catid={$catid}&id={$id}", function (data) {
-
-            $("#hits").html(data.views);
-
-        }, "json");
-
-    });
-
-    //评论
-
-    var commentsQuery = {
-
-        'catid': '{$catid}',
-
-        'id': '{$id}',
-
-        'size': 10
-
-    };
-
-    (function () {
-
-        var ds = document.createElement('script');
-
-        ds.type = 'text/javascript';
-
-        ds.async = true;
-
-        ds.src = GV.DIMAUB+'statics/js/comment/embed.js';
-
-        ds.charset = 'UTF-8';
-
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-
-    })();
-
-    //评论结束
-
-</script>
 
 </body>
 

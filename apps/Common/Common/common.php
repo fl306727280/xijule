@@ -929,6 +929,12 @@ function SendMail($address, $title, $message) {
     }
 }
 
+function get_firstmenu_title($catid)
+{
+    $category = M('category')->where(['catid'=>$catid])->field('catid,catname,catdir')->find();
+    return $category['catname'];
+}
+
 /**
  * 获取第一个下级的url
  * @param $catid

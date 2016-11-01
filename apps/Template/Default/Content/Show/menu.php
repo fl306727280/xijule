@@ -1,16 +1,24 @@
-<div class="nr_left">
-    <!-- <h2>{$category['catname']}<span>{$category['catdir']}</span></h2>
-    <ul id="classlist">
-        <volist name="lists" id="v" >
-            <li><h3><a href="{$v.url}" class="">{$v.title}</a></h3></li>
-        </volist>
-    </ul> -->
-    <div class="contact_l">
-        <img src="{$config_siteurl}statics/yzjc/images/kefu.jpg" width="227" height="101"><br>
-        <h3>{$menu.title}</h3>
-        <p>{$menu.phone}<br>
-            {$menu.email}<br>
-            {$menu.address}<br>
-        </p>
+<div class="ny-lf-wd fl">
+    <div class="ny-cut colwhite fontsize20">{:get_firstmenu_title($category['catid'])}</div>
+    <div class="ny-bor fontsize18 mrbt20">
+        <ul>
+            <?php if($lists):?>
+            <volist name="lists" id="v" >
+                <li <?php if($catid==$v['catid']):?> class="selected" <?php endif;?>><a href="{$v.url}" class="">{$v.title|str_cut=###,10}</a></li>
+            </volist>
+            <?php else:?>
+                <li <?php if($catid==$category['catid']):?> class="selected" <?php endif;?>><a href="{$category.url}" class="">{$category.catname}</a></li>
+            <?php endif;?>
+        </ul>
+    </div>
+    <div class="ny-cut colwhite fontsize20">联系我们</div>
+    <div class="ny-bor fontsize16 mrbt10 botbt">
+        <p class="textC lg32 botbt fontsize18">成都喜居乐环保科技有限公司</p>
+        <div class="addressnr fontsize16">
+            <p>400-89985870</p>
+            <p>13558695870</p>
+            <p>429702447</p>
+            <p>成都市成华区万科路9号万科金库1单元1127</p>
+        </div>
     </div>
 </div>

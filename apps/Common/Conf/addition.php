@@ -1,4 +1,4 @@
-<?php 
+<?php 
  return array (
   'CLOUD_USERNAME' => '',
   'CLOUD_PASSWORD' => '',
@@ -14,7 +14,7 @@
   'ERROR_MESSAGE' => '您浏览的页面暂时发生了错误！请稍后再试～',
   'ERROR_PAGE' => '',
   'URL_CASE_INSENSITIVE' => true,
-  'URL_MODEL' => 2,
+  'URL_MODEL' => 3,
   'URL_PATHINFO_DEPR' => '/',
   'URL_HTML_SUFFIX' => '.html',
   'TOKEN_ON' => false,

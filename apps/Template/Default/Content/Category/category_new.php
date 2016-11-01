@@ -11,7 +11,7 @@
   <meta name="keywords" content="{$SEO['keyword']}" />
   <link href="{$config_siteurl}statics/default/css/index.css" rel="stylesheet" type="text/css" />
   <link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
-  <link href="{$config_siteurl}statics/yzjc/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="{$config_siteurl}statics/xijule/css/common.css" rel="stylesheet" type="text/css" />
   <script src="{$config_siteurl}statics/js/jquery.js" type="text/javascript"></script>
   <script src="{$config_siteurl}statics/default/js/w3cer.js" type="text/javascript"></script>
 </head>

@@ -25,15 +25,14 @@ class IndexController extends Base {
             $catid = get_top_parentid($_GET['catid']);//获取顶级栏目catid
             $category = M('category')->where(['catid'=>$catid])->field('catid,catname,catdir')->find();
 
-            if($category['catid']==51){
+            if($category['catid']==51 || $category['catid']==73){
                 $list = M('category')->where(['parentid'=>$category['catid']])->field('catid,catname as title,url')->select();
 
                 $this->assign('lists',$list);
 
             }elseif ($category['catid']==28){
 
-            }elseif ($category['catid']==49){
-
+                
             }else{
                 $cate = M('category')->where(['parentid'=>$category['catid']])->field('catid')->select();
                 $n = array_column($cate,'catid');
@@ -43,6 +42,7 @@ class IndexController extends Base {
                 }
                 $this->assign('lists',$list);
             }
+
             $this->assign('category',$category);
         }
         $this->assign('menu',$leftMenu);
