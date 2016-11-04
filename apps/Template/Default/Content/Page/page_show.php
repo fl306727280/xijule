@@ -22,19 +22,12 @@
 
     <meta name="keywords" content="{$SEO['keyword']}" />
 
-    <link href="{$config_siteurl}statics/default/css/index.css" rel="stylesheet" type="text/css" />
-
-    <link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
 
     <link href="{$config_siteurl}statics/xijule/css/common.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=B3f7707c25da5b29a6ff69618788a296"></script>
-
+    
     <script src="{$config_siteurl}statics/js/jquery.js" type="text/javascript"></script>
 
-    <script src="{$config_siteurl}statics/default/js/w3cer.js" type="text/javascript"></script>
 
-    <script type="text/javascript" src="{$config_siteurl}statics/js/ajaxForm.js"></script>
 
 
 </head>

@@ -21,8 +21,6 @@
     <meta name="keywords" content="{$SEO['keyword']}" />
 
 
-    <link href="{$config_siteurl}statics/default/css/article_list.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 
