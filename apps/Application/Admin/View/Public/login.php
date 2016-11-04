@@ -181,7 +181,7 @@ if (window.parent !== window.self) {
 <div class="wrap">
   <div class="inner">
     <div class="header">
-      <h1>{$Config.sitename}</h1>
+     <!-- <h1>{$Config.sitename}</h1>-->
     </div>
     <div class="qzone_login clearfix">
       <div class="qzone_cont" id="_pt">
